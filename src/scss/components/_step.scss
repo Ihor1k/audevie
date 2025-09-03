@@ -9,6 +9,7 @@
 .step-block {
     // position: relative;
     background-image: url(/src/images/step-img.png);
+    -webkit-backround-image: url(/src/images/step-img.png);
     width: 100%;
     height: 610px;
 }
