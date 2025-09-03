@@ -1,0 +1,233 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0px;
+    background: #000;
+    border-bottom: 1px solid #ababab25;
+    @media screen and (max-width: 480px) {
+        padding: 16px 0;
+    }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); // напівпрозоре чорне
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 998; // трохи менше ніж бургер-меню
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header-block {
+  display: flex;
+  gap: 24px;
+  @media screen and (max-width: 480px) {
+    justify-content: space-between;
+    width: 100%;
+}
+}
+
+// .header-logo-mobile {
+//   display: none;
+//   @media screen and (max-width: 480px) {
+//         display: block;
+//   }
+// }
+
+// .header-logo {
+//   @media screen and (max-width: 480px) {
+//     display: none;     
+//   }
+// }
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp(8px, 2vw, 26px);
+}
+
+.header-link {
+    position: relative;
+    color: var(--natural_grey, #ABABAB);
+    font-family: "Albert Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.header-link:hover {
+    color: #FF6121;
+}
+
+.header-button {
+    overflow: hidden;
+    position: relative;
+    padding: 12px 22px;
+    color: var(--neutral-white, #F5F1F2);
+
+    /* buttons */
+    font-family: "Albert Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    text-transform: capitalize;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: ease-in-out 300ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    @media screen and (max-width: 480px) {
+      display: none;   
+    }
+}
+
+// .header-button span {
+//     z-index: 1;
+//     position: relative; 
+// }
+
+// .header-button::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: -100%;
+//     width: 100%;
+//     height: 100%;
+//     background: #103FD3; /* синя плашка */
+//     transition: all 300ms ease-in-out;
+//     z-index: 0;
+// }
+
+// .header-button:hover::before {
+//     left: 0;
+//   }
+
+.header-button svg path {
+  transition: linear 200ms all;
+}
+
+.header-button:hover, .header-button:hover svg path {
+    // background: var(--primary-200, #4C4648);
+    // background: #103FD3;
+    color: #FF6121;
+    fill: #FF6121;
+    border: 1px solid #FF6121;
+}
+
+
+
+// !BURGER
+
+body.menu-open {
+    overflow: hidden;
+  }
+
+.burger {
+    display: none;
+  }
+  
+  .burger-close {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    .header-inner {
+      position: relative;
+      justify-content: space-between;
+      
+    }
+  
+    .burger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      cursor: pointer;
+      
+    }
+  
+    .burger-close {
+      display: flex;
+      position: absolute;
+      top: 26px;
+      right: 24px;
+      background: none;
+      width: 38px;
+      height: 38px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1002;
+    }
+  
+    .header-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: unset;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: #0C0C0E;
+      z-index: 1000;
+      padding: 70px 16px 0;
+      transition: all 0.3s ease;
+    }
+  
+    .open {
+      display: flex !important;
+    }
+  
+    .header-link {
+      padding: 18px 0px;
+      text-decoration: none;
+      color: #ABABAB;
+      width: 100%;
+      text-align: center;
+    }
+
+    .header-link:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+  
+    .header-buttons {
+      display: none;
+    }
+  }
+  

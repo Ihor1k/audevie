@@ -1,0 +1,90 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    color: var(--primary_grey, #F5F1F2);
+    font-family: 'Urbanist';
+    font-size: clamp(32px, 2vw, 48px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%; /* 52.8px */
+    text-transform: uppercase;
+}
+
+.suptitle {
+    color: var(--natural_grey, #ABABAB);
+
+    /* h4 */
+    font-family: 'Manrope';
+    font-size: clamp(16px, 2vw, 18px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 23.4px */
+}
+
+.bold {
+    color: var(--primary_orange, #FF6121);
+
+    /* H2 */
+    font-family: 'Urbanist';
+    font-size: clamp(32px, 2vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.orange-button {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 16px;
+    border: 1px solid #FF6121;
+
+    color: var(--primary_grey, #F5F1F2);
+
+    /* buttons */
+    font-family: "Albert Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    text-transform: capitalize;
+
+    background: var(--primary_orange, #FF6121);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        justify-content: center;   
+    }
+}
+
+.orange-button svg path {
+    transition: all 200ms linear;
+}
+
+.orange-button:hover, .orange-button:hover svg path {
+    background: transparent;
+    color: #FF6121;
+    fill: #FF6121;
+}
+
+// br {
+//     @media screen and (max-width: 480px) {
+//         display: none;   
+//     }
+// }

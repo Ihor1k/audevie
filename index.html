@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audevie</title>
+  <link rel="stylesheet" href="./src/scss/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="menu-overlay"></div>
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-block">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./src/images/logo.svg"
+                width="42"
+                height="42"
+                alt="Logo"
+            /></a>
+          </div>
+          <!-- <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./src/images/test.png"
+                width="178"
+                height="28"
+                alt="Logo"
+            /></a>
+          </div> -->
+
+          <div class="burger">
+            <img src="./src/images/burger.svg" alt="">
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#5C5A5B"/>
+              </svg>
+            </div>
+            <a href="#services" class="header-link">Services</a>
+            <a href="#difference" class="header-link">Difference</a>
+            <a href="#work" class="header-link">Way We Work</a>
+            <a href="#results" class="header-link">Results</a>
+            <a href="#step" class="header-link">Next Step</a>
+
+          </div>
+        </div>
+        <div class="header-buttons mobile-visible">
+          <button class="header-button"><span>Get in Touch</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M0.834473 -0.00244141C1.05624 -0.00244141 1.26938 0.0859544 1.42627 0.242676L8.33447 7.15967V0.834473C8.33456 0.61365 8.42251 0.401795 8.57861 0.245605C8.73489 0.0893251 8.94744 0.00146484 9.16846 0.00146484C9.38935 0.00155294 9.60112 0.0894036 9.75732 0.245605C9.91353 0.40181 10.0014 0.613577 10.0015 0.834473V9.16846C10.0001 9.27723 9.97771 9.38479 9.93506 9.48486C9.8505 9.68849 9.68849 9.8505 9.48486 9.93506C9.38479 9.97771 9.27723 10.0001 9.16846 10.0015H0.834473C0.613577 10.0014 0.40181 9.91353 0.245605 9.75732C0.0894036 9.60112 0.00155294 9.38935 0.00146484 9.16846C0.00146484 8.94744 0.0893251 8.73489 0.245605 8.57861C0.401795 8.42251 0.61365 8.33456 0.834473 8.33447H7.15967L0.242676 1.42627C0.0859544 1.26938 -0.00244141 1.05624 -0.00244141 0.834473C-0.00235742 0.612669 0.0858308 0.399521 0.242676 0.242676C0.399521 0.0858308 0.612669 -0.00235742 0.834473 -0.00244141Z" fill="#F5F1F2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <div class="popup-inner">
+        <div class="popup-context">
+          <h3>contact <span class="bold">Form</span></h3>
+          <p>Drop us a message — we’ll get back to you soon</p>
+        </div>
+
+        <form class="popup-form" id="joinForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <input type="text" placeholder="Company / Organization - optional">
+          <textarea name="message" placeholder="Enter your message" required></textarea>
+          <div class="popup-wrapper">
+            <button type="popup" class="popup-btn">
+              Start Your Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.33545 -0.000976562C1.55727 -0.00092917 1.77038 0.0863297 1.92725 0.243164L8.83545 7.16016V0.834961C8.83553 0.614062 8.92338 0.402299 9.07959 0.246094C9.23583 0.0899016 9.44754 0.00199213 9.66846 0.00195312C9.88947 0.00195312 10.102 0.0898134 10.2583 0.246094C10.4143 0.402275 10.5014 0.614182 10.5015 0.834961V9.16895C10.5001 9.27773 10.4777 9.38527 10.4351 9.48535C10.3505 9.68891 10.1884 9.851 9.98486 9.93555C9.8848 9.97813 9.77719 10.0006 9.66846 10.002H1.33545C1.11444 10.002 0.901886 9.91409 0.745605 9.75781C0.589549 9.60163 0.501553 9.38973 0.501465 9.16895C0.501465 8.94797 0.589373 8.73537 0.745605 8.5791C0.901886 8.42282 1.11444 8.33496 1.33545 8.33496H7.66064L0.743652 1.42676C0.586776 1.26984 0.498535 1.05685 0.498535 0.834961C0.498619 0.613157 0.586807 0.400009 0.743652 0.243164C0.900548 0.0863994 1.11365 -0.000976561 1.33545 -0.000976562Z" fill="#0C0C0E"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <!-- <div class="popup-info">
+          <p>Thank you for contacting us! We’ll get back to you as soon as possible</p>
+        </div> -->
+      </div>
+
+      <span class="close-popup">&times;</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <img class="hero-img" src="./src/images/hero-img.png" alt="">
+      <div class="hero-content">
+        <h1 class="hero-title"><span class="orange">Strategic Marketing. </span><span class="opacity">Digital Excellence</span></h1>
+      </div>
+      <div class="hero-block">
+        <div class="hero-inner">
+          <p class="suptitle">Audevie combines user-first design, smart development, and data-driven strategy to help brands grow visibility, performance, and impact. <br> <br>
+
+            Marketing should do more than get attention — it should move people to act. Audevie brings strategy, design, and intelligence together to make your brand stand out, connect with the right audience, and drive real growth.</p>
+          <button class="orange-button">Start Your Project
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M0.834473 -0.00244141C1.05624 -0.00244141 1.26938 0.0859544 1.42627 0.242676L8.33447 7.15967V0.834473C8.33456 0.61365 8.42251 0.401795 8.57861 0.245605C8.73489 0.0893251 8.94744 0.00146484 9.16846 0.00146484C9.38935 0.00155294 9.60112 0.0894036 9.75732 0.245605C9.91353 0.40181 10.0014 0.613577 10.0015 0.834473V9.16846C10.0001 9.27723 9.97771 9.38479 9.93506 9.48486C9.8505 9.68849 9.68849 9.8505 9.48486 9.93506C9.38479 9.97771 9.27723 10.0001 9.16846 10.0015H0.834473C0.613577 10.0014 0.40181 9.91353 0.245605 9.75732C0.0894036 9.60112 0.00155294 9.38935 0.00146484 9.16846C0.00146484 8.94744 0.0893251 8.73489 0.245605 8.57861C0.401795 8.42251 0.61365 8.33456 0.834473 8.33447H7.15967L0.242676 1.42627C0.0859544 1.26938 -0.00244141 1.05624 -0.00244141 0.834473C-0.00235742 0.612669 0.0858308 0.399521 0.242676 0.242676C0.399521 0.0858308 0.612669 -0.00235742 0.834473 -0.00244141Z" fill="#F5F1F2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="service">
+    <div class="container">
+      <div class="service-block">
+        <div class="service-content">
+          <h2 class="title">The Services <br>
+            We <span class="bold">Deliver</span></h2>
+          <p class="suptitle">At Audevie, we provide more than just tactics — we deliver complete marketing solutions designed to make your brand visible, credible, and competitive. Each service builds on the other, ensuring every touchpoint is aligned with your growth goals.</p>
+        </div>
+      </div>
+      <div class="service-list">
+        <div class="service-item">
+          <h5 class="service-item-title"><b>UX</b> <br>
+            & Interface Design</h5>
+          <p class="service-item-text">Prototype development, mobile-first optimization, and feedback-driven refinements for seamless user journeys </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Web</b> <br>
+            Development</h5>
+          <p class="service-item-text">Responsive builds with interactive elements, CMS integration, and technical SEO for stronger visibility
+          </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Market</b> <br>
+            Intelligence</h5>
+          <p class="service-item-text">Competitive analysis, audience profiling, ROI assessments, and predictive analytics to inform smarter decisions </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Brand Strategy </b><br>
+            & Identity</h5>
+          <p class="service-item-text">Visual design, brand guidelines, and storytelling that create a distinct market presence 
+          </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Strategic</b> <br>
+            Marketing Consultation </h5>
+          <p class="service-item-text">Campaign planning, platform selection, and budget allocation to maximize outreach and ROI
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="difference" class="why">
+    <div class="container">
+      <div class="why-block">
+        <div class="why-content">
+          <h2 class="title">Why <span class="bold">Audevie <br>
+            Matters</span>  </h2>
+          <p class="suptitle">The real impact of marketing is measured in results. Without a clear strategy, businesses face wasted budgets and stalled growth. With Audevie, your marketing turns into a structured system that delivers measurable outcomes.</p>
+        </div>
+        <p class="why-subtitle">Our Impact</p>
+      </div>
+
+      <div class="why-list">
+        
+        <div class="why-item">
+          <div class="why-item-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1.33789 0C1.69266 -2.64326e-09 2.03323 0.140849 2.28418 0.391602L13.334 11.4551V1.33789C13.3341 0.984506 13.4747 0.645395 13.7246 0.395508C13.9745 0.145631 14.3136 0.00493745 14.667 0.00488281C15.0204 0.00488281 15.3594 0.145712 15.6094 0.395508C15.8593 0.645395 15.9999 0.984506 16 1.33789V14.667C15.9979 14.8412 15.9619 15.0136 15.8936 15.1738C15.7583 15.4994 15.4994 15.7583 15.1738 15.8936C15.0136 15.9619 14.8412 15.9979 14.667 16H1.33789C0.984539 15.9999 0.645374 15.8592 0.395508 15.6094C0.145712 15.3594 0.00585938 15.0204 0.00585938 14.667C0.00589043 14.3136 0.145666 13.9745 0.395508 13.7246C0.645374 13.4747 0.984538 13.3341 1.33789 13.334H11.4551L0.391602 2.28418C0.140849 2.03323 -2.64326e-09 1.69266 0 1.33789C8.79593e-05 0.983081 0.14072 0.642507 0.391602 0.391602C0.64249 0.140713 0.983092 0.000111569 1.33789 0Z" fill="white" fill-opacity="0.27"/>
+            </svg>
+          </div>
+          <div class="why-item-inner">
+            <h5 class="why-item-title">Without Audevie</h5>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="white" stroke-opacity="0.27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Inconsistent and weak brand presence</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="white" stroke-opacity="0.27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Websites that look good but fail to convert</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="white" stroke-opacity="0.27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Campaigns with wasted spend and unclear ROI</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="white" stroke-opacity="0.27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Decisions mostly made on blind guesswork</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="white" stroke-opacity="0.27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text" style="border-bottom: none;  padding-bottom: 0px;">Growth that stays flat and unpredictable</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="why-item">
+          <div class="why-item-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1.33789 0C1.69266 -2.64326e-09 2.03323 0.140849 2.28418 0.391602L13.334 11.4551V1.33789C13.3341 0.984506 13.4747 0.645395 13.7246 0.395508C13.9745 0.145631 14.3136 0.00493745 14.667 0.00488281C15.0204 0.00488281 15.3594 0.145712 15.6094 0.395508C15.8593 0.645395 15.9999 0.984506 16 1.33789V14.667C15.9979 14.8412 15.9619 15.0136 15.8936 15.1738C15.7583 15.4994 15.4994 15.7583 15.1738 15.8936C15.0136 15.9619 14.8412 15.9979 14.667 16H1.33789C0.984539 15.9999 0.645374 15.8592 0.395508 15.6094C0.145712 15.3594 0.00585938 15.0204 0.00585938 14.667C0.00589043 14.3136 0.145666 13.9745 0.395508 13.7246C0.645374 13.4747 0.984538 13.3341 1.33789 13.334H11.4551L0.391602 2.28418C0.140849 2.03323 -2.64326e-09 1.69266 0 1.33789C8.79593e-05 0.983081 0.14072 0.642507 0.391602 0.391602C0.64249 0.140713 0.983092 0.000111569 1.33789 0Z" fill="#FF6121"/>
+            </svg>
+          </div>
+          <div class="why-item-inner">
+            <h5 class="why-item-title" style="color: #FF6121;">Without Audevie</h5>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="#FF6121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Strong and consistent brand identity everywhere</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="#FF6121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Optimized responsive sites that actually drive sales</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="#FF6121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Data-driven marketing strategies with proven ROII</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="#FF6121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text">Insights and predictive analytics guiding decisions</p>
+            </div>
+            <div class="why-item-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5 5.5L8.4375 18.5L2.5 12.5909" stroke="#FF6121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="why-item-text" style="border-bottom: none; padding-bottom: 0px;">Scalable, sustainable growth with benchmarks</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <section id="work" class="work">
+    <div class="container">
+      <div class="work-block">
+        <p class="work-subtitle">Our Process</p>
+        <div class="work-content">
+          <h2 class="title">How <span class="bold">We <br>
+            Work</span></h2>
+          <p class="suptitle">We believe great marketing should be clear, collaborative, and measurable. That’s why our process is designed to keep projects moving quickly while staying aligned with your business goals. We cut through complexity with a method that ensures you always know what’s happening, why it matters, and what comes next</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Discover</b></h5>
+          <p class="service-item-text" style="max-width: 282px;">Market research, competitor analysis, and audience insights. 
+            <br> <br>
+            This phase lays the foundation for strategic decisions  </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Design</b></h5>
+          <p class="service-item-text" style="max-width: 282px;">UX, branding, and campaigns built around user needs and business objectives. 
+            <br> <br>
+            Every element is intentionaly
+          </p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Develop</b></h5>
+          <p class="service-item-text" style="max-width: 282px;">Responsive, optimized platforms with technical SEO and performance at their core. 
+            <br> <br>
+            Built to last and scale</p>
+        </div>
+        <div class="service-item">
+          <h5 class="service-item-title"><b>Deploy</b></h5>
+          <p class="service-item-text" style="max-width: 282px;">Launch multi-channel strategies, monitor performance, and refine continuously to maximize impact.
+            <br> <br>
+            Built for impact and growth  
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="results" class="result">
+    <img src="./src/images/result-bg.png" alt="" class="result-img">
+    <img src="./src/images/result-bg-mobile.png" alt="" class="result-img-mobile">
+    <div class="container">
+      <div class="result-block">
+        <div class="result-content">
+          <h2 class="title">What <br> <span class="bold">
+            You Gain </span></h2>
+          <p class="suptitle">Our clients don’t just get services — they see lasting change across the metrics that matter most. Audevie’s work creates sustainable marketing ecosystems that strengthen brands, boost engagement, and generate measurable business growth</p>
+        </div>
+      </div>
+      <div class="result-card">
+        <h5 class="result-card-title">Key Outcomes</h5>
+        <div class="card-inner">
+          <p class="card-item-text"><span>&#8226;</span> Increased brand visibility in competitive markets — becoming the name your audience remembers first</p>
+          <p class="card-item-text"><span>&#8226;</span> Higher engagement and conversion rates — turning interest into action, not just traffic</p>
+          <p class="card-item-text"><span>&#8226;</span> Clearer ROI and reduced wasted spend — every campaign tied back to performance</p>
+          <p class="card-item-text"><span>&#8226;</span> Smarter decision-making through analytics — no more guesswork, only informed moves</p>
+          <p class="card-item-text"><span>&#8226;</span> Long-term, scalable marketing systems — strategies that grow with you instead of holding you back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step" class="step">
+    <div class="container">
+      <div class="step-block">
+        <!-- <img src="./src/images/step-img.png" alt="" class="step-img"> -->
+        <div class="step-inner">
+          
+          <h3 class="step-title">The Next <b>Step</b></h3>
+          <p class="step-text">Marketing works best when it starts with action. Whether you need sharper branding, a new website, or data-backed campaigns, Audevie is ready to build strategies that deliver results</p>
+          <button class="orange-button">Start Your Project
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+              <path d="M1.33545 -0.000976562C1.55727 -0.00092917 1.77038 0.0863297 1.92725 0.243164L8.83545 7.16016V0.834961C8.83553 0.614062 8.92338 0.402299 9.07959 0.246094C9.23583 0.0899016 9.44754 0.00199213 9.66846 0.00195312C9.88947 0.00195312 10.102 0.0898134 10.2583 0.246094C10.4143 0.402275 10.5014 0.614182 10.5015 0.834961V9.16895C10.5001 9.27773 10.4777 9.38527 10.4351 9.48535C10.3505 9.68891 10.1884 9.851 9.98486 9.93555C9.8848 9.97813 9.77719 10.0006 9.66846 10.002H1.33545C1.11444 10.002 0.901886 9.91409 0.745605 9.75781C0.589549 9.60163 0.501553 9.38973 0.501465 9.16895C0.501465 8.94797 0.589373 8.73537 0.745605 8.5791C0.901886 8.42282 1.11444 8.33496 1.33545 8.33496H7.66064L0.743652 1.42676C0.586776 1.26984 0.498535 1.05685 0.498535 0.834961C0.498619 0.613157 0.586807 0.400009 0.743652 0.243164C0.900548 0.0863994 1.11365 -0.000976561 1.33545 -0.000976562Z" fill="#F5F1F2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="contact-block">
+        <img src="./src/images/contact-img.png" alt="" class="contact-img">
+        <div class="contact-inner">
+          <h6 class="title">Contact <span class="bold">Form</span></h6>
+          <p class="contact-text">Drop us a message — we’ll get back to you soon</p>
+
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Company / Organization - optional">
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="contact-button">
+              Start Your Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.33545 -0.000976562C1.55727 -0.00092917 1.77038 0.0863297 1.92725 0.243164L8.83545 7.16016V0.834961C8.83553 0.614062 8.92338 0.402299 9.07959 0.246094C9.23583 0.0899016 9.44754 0.00199213 9.66846 0.00195312C9.88947 0.00195312 10.102 0.0898134 10.2583 0.246094C10.4143 0.402275 10.5014 0.614182 10.5015 0.834961V9.16895C10.5001 9.27773 10.4777 9.38527 10.4351 9.48535C10.3505 9.68891 10.1884 9.851 9.98486 9.93555C9.8848 9.97813 9.77719 10.0006 9.66846 10.002H1.33545C1.11444 10.002 0.901886 9.91409 0.745605 9.75781C0.589549 9.60163 0.501553 9.38973 0.501465 9.16895C0.501465 8.94797 0.589373 8.73537 0.745605 8.5791C0.901886 8.42282 1.11444 8.33496 1.33545 8.33496H7.66064L0.743652 1.42676C0.586776 1.26984 0.498535 1.05685 0.498535 0.834961C0.498619 0.613157 0.586807 0.400009 0.743652 0.243164C0.900548 0.0863994 1.11365 -0.000976561 1.33545 -0.000976562Z" fill="#0C0C0E"/>
+              </svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-right">
+          <a href="/"><img class="footer-logo" src="./src/images/footer-logo.png" width="379" height="79" alt=""></a>
+          <p class="footer-year">© 2025 Audevie.</p>
+        </div>
+        <div class="footer-right line">
+          <div class="footer-menu">
+            <a href="#services" class="header-link" style="border-bottom: unset; padding: unset;">Services</a>
+            <a href="#difference" class="header-link" style="border-bottom: unset; padding: unset;">Difference</a>
+            <a href="#work" class="header-link" style="border-bottom: unset; padding: unset;">Way We Work</a>
+            <a href="#results" class="header-link" style="border-bottom: unset; padding: unset;">Results</a>
+            <a href="#step" class="header-link" style="border-bottom: unset; padding: unset;">Next Step</a>
+          </div>
+          <p class="footer-email">info@audevie.pro</p>
+          <a href="./src/politic.html" class="footer-policy">Privacy Policy. All rights reserved</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

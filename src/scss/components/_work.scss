@@ -1,0 +1,38 @@
+.work {
+    margin-top: 180px;
+    padding-top: 20px;
+    @media screen and (max-width: 480px) {
+        margin-top: 110px;   
+    }
+}
+
+.work-block {
+    display: flex;  
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.work-subtitle {
+    color: var(--natural_grey, #ABABAB);
+    font-family: 'Urbanist';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 166.667% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    @media screen and (max-width: 480px) {
+        display: none;   
+    }
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 49%;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+    }
+}
+
