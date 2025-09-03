@@ -46,11 +46,11 @@
                 <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#5C5A5B"/>
               </svg>
             </div>
-            <a href="#services" class="header-link">Services</a>
-            <a href="#difference" class="header-link">Difference</a>
-            <a href="#work" class="header-link">Way We Work</a>
-            <a href="#results" class="header-link">Results</a>
-            <a href="#step" class="header-link">Next Step</a>
+            <a href="/index.html#services" class="header-link">Services</a>
+            <a href="/index.html#difference" class="header-link">Difference</a>
+            <a href="/index.html#work" class="header-link">Way We Work</a>
+            <a href="/index.html#results" class="header-link">Results</a>
+            <a href="/index.html#step" class="header-link">Next Step</a>
 
           </div>
         </div>
@@ -64,6 +64,48 @@
       </div>
     </div>
   </header>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <div class="popup-inner">
+        <div class="popup-context">
+          <h3>contact <span class="popup-bold">Form</span></h3>
+          <p>Drop us a message — we’ll get back to you soon</p>
+        </div>
+
+        <form class="popup-form" id="joinForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <input type="text" placeholder="Company / Organization - optional">
+          <textarea name="message" placeholder="Enter your message" required></textarea>
+          <div class="popup-wrapper">
+            <button type="popup" class="popup-btn">
+              Start Your Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.33545 -0.000976562C1.55727 -0.00092917 1.77038 0.0863297 1.92725 0.243164L8.83545 7.16016V0.834961C8.83553 0.614062 8.92338 0.402299 9.07959 0.246094C9.23583 0.0899016 9.44754 0.00199213 9.66846 0.00195312C9.88947 0.00195312 10.102 0.0898134 10.2583 0.246094C10.4143 0.402275 10.5014 0.614182 10.5015 0.834961V9.16895C10.5001 9.27773 10.4777 9.38527 10.4351 9.48535C10.3505 9.68891 10.1884 9.851 9.98486 9.93555C9.8848 9.97813 9.77719 10.0006 9.66846 10.002H1.33545C1.11444 10.002 0.901886 9.91409 0.745605 9.75781C0.589549 9.60163 0.501553 9.38973 0.501465 9.16895C0.501465 8.94797 0.589373 8.73537 0.745605 8.5791C0.901886 8.42282 1.11444 8.33496 1.33545 8.33496H7.66064L0.743652 1.42676C0.586776 1.26984 0.498535 1.05685 0.498535 0.834961C0.498619 0.613157 0.586807 0.400009 0.743652 0.243164C0.900548 0.0863994 1.11365 -0.000976561 1.33545 -0.000976562Z" fill="#0C0C0E"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <!-- <div class="popup-info">
+          <p>Thank you for contacting us! We’ll get back to you as soon as possible</p>
+        </div> -->
+      </div>
+
+      <span class="close-popup">&times;</span>
+    </div>
+  </div>
 
   <section class="policy">
     <div class="container">

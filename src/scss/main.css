@@ -454,6 +454,11 @@ body.menu-open {
   resize: none;
 }
 
+.popup-bold {
+  color: var(--primary_orange, #FF6121);
+  font-weight: 700;
+}
+
 .popup-wrapper {
   display: flex;
   justify-content: center;
